@@ -9,7 +9,7 @@ import { QuestionFiveComponent } from './question-five/question-five.component';
 const routes: Routes = [
   { path: '', component: HeroComponent },
   { path: 'hero', component: HeroComponent },
-  { path: 'post', component: PostComponent },
+  { path: 'posts', component: PostComponent },
   { path: 'three', component: QuestionThreeComponent },
   { path: 'four', component: QuestionFourComponent },
   { path: 'five', component: QuestionFiveComponent }

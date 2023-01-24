@@ -35,7 +35,6 @@ export class QuestionFourComponent implements OnInit {
         citizenId: dataForm.citizenId
       }
       this.questionService.postCitizen(data).subscribe((res: any) => {
-        console.log(res)
         if(res.error_code === '200') {
           this.output = res.success
         }
