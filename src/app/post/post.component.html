@@ -1,0 +1,24 @@
+<p-table #dt [columns]="cols" [value]="dataPostList" [paginator]="true" [rows]="50" [scrollable]="true" [responsive]="true"
+    [totalRecords]="totalRecords" [resetPageOnSort]="false">
+    <ng-template pTemplate="header">
+        <tr>
+            <ng-container *ngFor="let item of cols">
+                <th class="p-text-center" id="th{{firstLetter(item.id)}}"> {{item.header}} </th>
+            </ng-container>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+        <tr>
+            <ng-container *ngFor="let item of cols">
+                <td id="td{{firstLetter(item.id)}}" class="{{item.class}}" >
+                    {{data[item.field]}}
+                </td>
+            </ng-container>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td class="p-text-center" colspan="10">Data Not Found.</td>
+        </tr>
+    </ng-template>
+</p-table>

@@ -1,0 +1,10 @@
+<div class="contrainer">
+    <h1>My Heros</h1>
+    <ul>
+        <li *ngFor="let item of heroList; index as i" (click)="onSelectMyHero(item?.label)">
+            {{ i + 1 }} {{ item?.label }}
+        </li>
+    </ul>
+
+    <label>My hero is <span class="heroUnderline">{{myHero}}</span></label>
+</div>

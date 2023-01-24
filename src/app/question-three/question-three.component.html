@@ -1,0 +1,34 @@
+<div class="contrainer">
+    <form [formGroup]="areaForm">
+        <p-card>
+            <ng-template pTemplate="header">
+                <h1 class="p-text-center">Input</h1>
+            </ng-template>
+            <div class="row justify-center">
+                <div class="col-1">
+                    <label>Base: </label>
+                </div>
+                <div class="col-2 ">
+                    <input class="form-control" pInputText type="text"  id="txtBase" formControlName="base" (change)="postArea()"/>
+                </div>
+            </div>
+            <div class="row justify-center">
+                <div class="col-1">
+                    <label>height: </label>
+                </div>
+                <div class="col-2">
+                    <input class="form-control" pInputText type="text"  id="txtBase" formControlName="height" (change)="postArea()"/>
+                </div>
+            </div>
+            <div class="row justify-center">
+                <div class="col-1">
+                    <label>Output: </label>
+                </div>
+                <div class="col-2">
+                    <label>{{output}}</label>
+                </div>
+            </div>
+        </p-card>
+        
+    </form>
+</div>
